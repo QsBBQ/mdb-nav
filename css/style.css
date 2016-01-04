@@ -12,3 +12,15 @@ select {
     border-radius: 5px;
     font-size: 1.4em;
 }
+
+.btnLink { border: 3px solid grey; padding: 5px; margin: 60px; font-size:
+large; text-decoration: none; color: grey;}
+div.homePage {
+  background: transparent;
+  font-size: large;
+  text-align: center;
+}
+div.homePage h1{
+  background: transparent;
+  font-size: 300%;
+}
