@@ -6,3 +6,9 @@ movie-nav .list-inline > li > a:hover { background-color: lightgrey;
 text-decoration: none;}
 movie-nav .list-inline > li > a.active { background-color: #337AB7;
 color: white;}
+
+select {
+    padding: 0.5em;
+    border-radius: 5px;
+    font-size: 1.4em;
+}

@@ -5,7 +5,7 @@ angular.module('moviesDBApp', ['ngRoute','movieDBControllers','movieDBDirectives
         "apiKey": "35e16679c616a21b9ddebb66272c5902"
     })
 .config(function($routeProvider) {
-		 
+
 		$routeProvider
 		  .when('/popular', {
 		  	templateUrl: 'templates/movies.html',
@@ -23,5 +23,9 @@ angular.module('moviesDBApp', ['ngRoute','movieDBControllers','movieDBDirectives
 			templateUrl: "templates/movies.html",
 			controller: "MovieNowPlayingController"
 		})
-		  .otherwise({redirectTo: '/popular'}); 
+    .when('/about', {
+                  templateUrl: 'templates/about.html',
+                  controller: 'AboutController'
+       })
+		  .otherwise({redirectTo: '/popular'});
 	});

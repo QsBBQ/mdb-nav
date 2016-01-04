@@ -9,7 +9,7 @@ angular.module('movieDBControllers',[])
           $scope.loading = false;
       }
       ).catch(
-        function(error) { 
+        function(error) {
           console.log('error', error)
         });
 })
@@ -23,7 +23,7 @@ angular.module('movieDBControllers',[])
           $scope.loading = false;
       }
       ).catch(
-        function(error) { 
+        function(error) {
           console.log('error', error)
         });
 })
@@ -37,9 +37,9 @@ angular.module('movieDBControllers',[])
           $scope.loading = false;
       }
       ).catch(
-        function(error) { 
+        function(error) {
           console.log('error', error);
-           
+
         });
 })
 .controller('MovieTopRatedController',function($scope, MovieListService,myMovieConfig) {
@@ -52,7 +52,21 @@ angular.module('movieDBControllers',[])
           $scope.loading = false;
       }
       ).catch(
-        function(error) { 
+        function(error) {
           console.log('error', error)
         });
+})
+.controller('AboutController',function($scope) {
+//
+   $scope.title = 'About Us';
+   $scope.maps = [{
+        address: 'Trinity College Dublin, Dublin',
+        zoom: 14,
+        width: 400
+        },{
+        address: '51st Street, New York, New York',
+        zoom: 14,
+        width: 400
+        }];
+  $scope.map = $scope.maps[0];
 });
