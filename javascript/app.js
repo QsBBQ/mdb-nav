@@ -35,5 +35,9 @@ angular.module('moviesDBApp', ['ngRoute','movieDBControllers','movieDBDirectives
                   templateUrl: "templates/error.html",
                   controller: 'MovieErrorController'
              })
+       .when('/movie/:movieId', {
+                  templateUrl: 'templates/movieDetails.html',
+                  controller: 'MovieDetailsController'
+               })
 		  .otherwise({redirectTo: '/popular'});
 	});

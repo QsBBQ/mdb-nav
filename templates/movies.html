@@ -23,7 +23,9 @@
 				  <div class="panel-footer" >From: {{movie.release_date | date: 'mediumDate'}}</div>
 			    </div>
 		    </div> -->
-				<movie-info-box info="movie"></movie-info-box>
+					<a href="#/movie/{{movie.id}}">
+				  <movie-info-box info="movie"></movie-info-box>
+				  </a>
 		  </div>
 	</div>
 </div>
