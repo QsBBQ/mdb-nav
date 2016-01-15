@@ -13,7 +13,7 @@ angular.module('movieDBControllers',[])
           console.log('error', error)
         });
 })
-.controller('MovieUpcomingController',function($scope, MovieListService,myMovieConfig) {
+.controller('MovieUpcomingController',function($scope, MovieListService,myMovieConfig, $location) {
  $scope.loading = true;
  $scope.title = 'Upcoming Movies'
  var url = myMovieConfig.moviesEndpoint + '/upcoming?api_key=' + myMovieConfig.apiKey;
@@ -24,6 +24,7 @@ angular.module('movieDBControllers',[])
       }
       ).catch(
         function(error) {
+          $location.path('/error/'+error.data.status_message+'/'+error.status)
           console.log('error', error)
         });
 })
